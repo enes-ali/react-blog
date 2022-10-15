@@ -1,0 +1,9 @@
+.toggle-button{
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    color: var(--text-color-primary);
+    cursor: pointer;
+}
+

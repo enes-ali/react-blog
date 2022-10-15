@@ -1,0 +1,14 @@
+:root{
+    --color-dark-gray: rgb(25, 25, 25);
+    --color-red: rgb(221, 43, 30);
+    --color-blue: rgb(38, 169, 230);
+    --text-color-primary: white;
+    --text-color-secondary: rgb(0, 0, 0);
+    --color-primary: var(--color-red);
+    --color-secondary: var(--color-blue);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}

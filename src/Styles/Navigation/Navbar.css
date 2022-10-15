@@ -1,0 +1,30 @@
+#navbar{
+    display: flex;
+    background-color: black;
+    align-items: center;
+    max-width: 1366px;
+    padding: 0 1rem;
+}
+
+#navbar #nav-brand{
+    margin-right: auto;
+}
+#navbar #nav-brand a{
+    color: var(--text-color-primary);
+    text-decoration: none;
+}
+
+#navbar #nav-menu .nav-list{
+
+}
+
+#navbar #nav-menu .nav-list-link{
+    color: var(--text-color-primary);
+    border-radius: 50rem;
+    padding: .5rem 1rem;
+}
+
+#navbar #nav-menu .nav-list-link:hover{
+    background-color: white;
+    color: var(--text-color-secondary);
+}
