@@ -5,7 +5,7 @@ function NavBrand(props){
 
     return(
         <div id="nav-brand">
-            <Link to="/"><h1>BRANDED</h1></Link>
+            <Link to="/"><h1>Branded</h1></Link>
         </div>
     );
 }

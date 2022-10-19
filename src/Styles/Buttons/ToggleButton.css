@@ -1,9 +1,12 @@
 .toggle-button{
     display: flex;
     justify-content: center;
+    align-items: center;
+    column-gap: .2rem;
     border: none;
     background-color: transparent;
     color: var(--text-color-primary);
     cursor: pointer;
+    text-align: center;
 }
 

@@ -1,10 +1,11 @@
 #mobile-navbar{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3rem 1fr;
+    height: 4.5rem;
+    display: flex;
     align-items: center;
-    padding: 0px 5px;
-    background-color: black;
+    justify-content: space-between;
+    padding: 0px 1.5rem;
+    background-color: var(--navbar-color);
+    border-bottom: solid 1px black;
 }
 
 #mobile-navbar #nav-brand a {
@@ -14,39 +15,20 @@
 
 #mobile-navbar #nav-brand h1{
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
-#mobile-navbar .toggle-button{
-    font-size: 1.5rem;
-    justify-self: end;
-}
-
-#mobile-navbar #nav-menu{
-    height: 0rem;
-    overflow: hidden;
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    transition: height .5s ease-out;
-}
-
-.mbl-nav-menu-active{
-    height: 15rem!important;
-}
-
-#mobile-navbar .nav-list{
-    width: 100%;
-}
-
-#mobile-navbar .nav-list-link{
+#mobile-navbar #nav-menu .nav-list-link{
+    font-size: .85rem;
     color: var(--text-color-primary);
-    width: 100%;
-    padding: 1rem 0;
-    text-align: center;
-    border-bottom: 1px solid rgb(82, 82, 82);
+    margin-right: .5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
-#mobile-navbar .nav-list-link:hover{
-    background-color: white;
-    color: var(--text-color-secondary);
+#mobile-navbar #nav-menu .nav-list-i:last-child .nav-list-link{
+    color: white;
+    background-color: black;
+    border-radius: 55rem;
+    padding: .5rem 1.2rem;
 }
