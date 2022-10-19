@@ -5,14 +5,14 @@ import "../../Styles/Buttons/ToggleButton.css";
 export default function ToggleButton(props){
     let [toggled, toggle] = useState(false);
 
-    useEffect(() => { toggle(props.checked); }, [props.checked]);
+    useEffect(() => { toggle(props.toggled); }, [props.toggled]);
 
-    const icon = () => toggled ? "fa-x" : "fa-bars";
+    const icon = () => toggled ? props.toggled_icon : props.icon;
 
     const text = () => {
-        if(!props.text || !props.text_active)
+        if(!props.text || !props.toggled_text)
             return
-        return <span>{toggled ? props.text_active : props.text}</span>;
+        return <span>{toggled ? props.toggled_text : props.text}</span>;
     }
 
     const onClick = () => {
