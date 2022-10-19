@@ -31,7 +31,8 @@ class MobileNavbar extends React.Component{
           <div id="mobile-navbar">
             <NavBrand />
             <ToggleButton onClick={ this.toggleMenu.bind(this) }
-                icon="fa-bars" active_icon="fa-x" checked={this.state.on} />
+                icon="fa-bars" active_icon="fa-x" checked={this.state.on} 
+                    text="Open" text_active="Close" />
             <NavbarMenu direction="col" custom_class={ menu_class } 
                 onItemClick={ this.onMenuItemClick.bind(this) }/>
           </div>  
