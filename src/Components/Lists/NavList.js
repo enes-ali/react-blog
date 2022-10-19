@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../../Styles/Lists/Lists.css";
 
-function UList(props){
+function NavList(props){
     let menu = Object.entries(props.items).map((element, idx) => {
         return(
             <li key={idx} className="nav-list-i" onClick={ (e) => props.onItemClick(idx) }>
@@ -19,4 +19,4 @@ function UList(props){
     );
 }
 
-export default UList;
+export default NavList;
