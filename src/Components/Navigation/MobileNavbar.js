@@ -27,7 +27,7 @@ class MobileNavbar extends React.Component{
         return(
             <div id="mobile-navbar">
                 <NavBrand />
-                <NavbarMenu direction="column"
+                <NavbarMenu direction="row"
                     items={ {"Sign up": "/sign-up"} }/>
             </div>  
         );
