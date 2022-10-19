@@ -1,10 +1,24 @@
+:root{
+    --navbar-color: rgb(255, 192, 23);
+}
+
+#navbar-wrapper{
+    border-bottom: solid 1px black;
+    background-color: var(--navbar-color);
+    height: 5rem;
+}
+
 #navbar{
     display: flex;
-    background-color: black;
     align-items: center;
     max-width: 1366px;
     padding: 0 1rem;
     margin: auto;
+    height: 100%;
+}
+
+#nav-brand{
+    font-family: 'Pacifico', cursive;
 }
 
 #navbar #nav-brand{
@@ -15,17 +29,17 @@
     text-decoration: none;
 }
 
-#navbar #nav-menu .nav-list{
-
-}
-
 #navbar #nav-menu .nav-list-link{
+    font-size: .85rem;
     color: var(--text-color-primary);
-    border-radius: 50rem;
-    padding: .5rem 1rem;
+    margin-right: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
-#navbar #nav-menu .nav-list-link:hover{
-    background-color: white;
-    color: var(--text-color-secondary);
+#navbar #nav-menu .nav-list-i:last-child .nav-list-link{
+    color: white;
+    background-color: black;
+    border-radius: 55rem;
+    padding: .5rem 1rem;
 }
