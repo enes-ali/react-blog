@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Components/Navigation/Navbar.js";
 import MobileNavbar from "./Components/Navigation/MobileNavbar.js";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home.js";
 import "./App.css";
+
 
 
 export default function App(){
@@ -16,7 +18,13 @@ export default function App(){
 
   return(
     <BrowserRouter>
-        { is_mobile ? <MobileNavbar /> : <Navbar /> }
+      { is_mobile ? <MobileNavbar /> : <Navbar /> }
+
+      <div id="page-wrapper">
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

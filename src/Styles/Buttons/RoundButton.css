@@ -1,0 +1,9 @@
+.round-button{
+    border: none;
+    border-radius: 100rem;
+    background-color: black;
+    color: white;
+    padding: .5rem 2.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
