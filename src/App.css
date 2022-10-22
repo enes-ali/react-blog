@@ -1,11 +1,15 @@
 :root{
-    --color-dark-gray: rgb(25, 25, 25);
+    /* Colors */
+    --color-yellow: rgb(255, 192, 23);
     --color-red: rgb(221, 43, 30);
     --color-blue: rgb(38, 169, 230);
+    --color-primary: white;
+    --color-secondary: var(--color-blue);
     --text-color-primary: black;
     --text-color-secondary: white;
-    --color-primary: var(--color-red);
-    --color-secondary: var(--color-blue);
+
+    /* Sizes */
+    --content-max-width: 90rem;
 }
 
 body{

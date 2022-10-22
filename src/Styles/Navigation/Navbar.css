@@ -1,5 +1,5 @@
 :root{
-    --navbar-color: rgb(255, 192, 23);
+    --navbar-color: var(--color-yellow);
 }
 
 #navbar-wrapper{
@@ -11,7 +11,7 @@
 #navbar{
     display: flex;
     align-items: center;
-    max-width: 1366px;
+    max-width: var(--content-max-width);
     padding: 0 1rem;
     margin: auto;
     height: 100%;

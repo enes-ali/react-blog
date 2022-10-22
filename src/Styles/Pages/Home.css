@@ -1,0 +1,40 @@
+#home-wrapper{
+
+}
+
+#banner{
+    background-color: var(--color-yellow); 
+    border-bottom: solid 1px black;
+}
+
+#banner-content{
+    max-width: 90rem;
+    margin: auto;
+    padding: 3rem 2rem;
+}
+
+#banner-content h1, #banner-content p{
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+#banner-content > h1{
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(4rem, 1rem + 10vw, 7rem);
+    line-height: 4.5rem;
+}
+
+#banner-content > p{
+    color: rgb(20, 20, 20);
+    font-family: 'Dosis', sans-serif;
+    font-size: clamp(1rem, 1rem + 2vw, 1.5rem);
+    max-width: 25rem;
+    font-weight: 500;
+}
+
+
+@media screen and (min-width: 90rem){
+    #banner-content{
+        padding: 7rem 0;
+    }
+}
