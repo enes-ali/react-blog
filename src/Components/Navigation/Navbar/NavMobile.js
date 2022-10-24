@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import NavBrand from "./NavBrand";
-import "../../Styles/Navigation/MobileNavbar.css";
-import NavbarMenu from "./NavMenu";
+import NavMenu from "./NavMenu";
+import "../../../Styles/Navigation/Navbar/Mobile.css";
 
 
-export default function MobileNavbar(props){
+export default function NavMobile(props){
 
     useEffect(() => {
         const root_element = document.querySelector(":root");
@@ -16,7 +16,7 @@ export default function MobileNavbar(props){
     return(
         <div id="mobile-navbar">
             <NavBrand />
-            <NavbarMenu direction="row"
+            <NavMenu direction="row"
                 items={ {"Sign up": "/sign-up"} }/>
         </div>
     );
