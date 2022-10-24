@@ -1,17 +1,19 @@
 #mobile-navbar{
-    height: 4.5rem;
+    height: var(--navbar-height);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
     padding: 0px 1.5rem;
     background-color: var(--navbar-color);
     border-bottom: solid 1px black;
+    transition: background-color .5s;
 }
 
-#mobile-navbar #nav-brand a {
-    color: var(--text-color-primary);
-    text-decoration: none;
-}
 
 #mobile-navbar #nav-brand h1{
     margin: 0;
@@ -20,15 +22,7 @@
 
 #mobile-navbar #nav-menu .nav-list-link{
     font-size: .85rem;
-    color: var(--text-color-primary);
-    margin-right: .5rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-}
-
-#mobile-navbar #nav-menu .nav-list-i:last-child .nav-list-link{
-    color: white;
-    background-color: black;
-    border-radius: 55rem;
     padding: .5rem 1.2rem;
 }

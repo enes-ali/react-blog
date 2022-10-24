@@ -1,11 +1,20 @@
 :root{
     --navbar-color: var(--color-yellow);
+    --navbar-height: 5rem;
+    --navbar-sign-up-color: rgb(0, 0, 0);
+    --navbar-animation-duration: .5s;
 }
 
 #navbar-wrapper{
+    width: 100%;
+    height: var(--navbar-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
     border-bottom: solid 1px black;
     background-color: var(--navbar-color);
-    height: 5rem;
+    transition: background-color var(--navbar-animation-duration);
 }
 
 #navbar{
@@ -24,7 +33,7 @@
 #navbar #nav-brand{
     margin-right: auto;
 }
-#navbar #nav-brand a{
+#nav-brand a{
     color: var(--text-color-primary);
     text-decoration: none;
 }
@@ -37,9 +46,13 @@
     font-weight: 400;
 }
 
-#navbar #nav-menu .nav-list-i:last-child .nav-list-link{
-    color: white;
-    background-color: black;
+.nav-list-i:last-child .nav-list-link{
+    background-color: var(--navbar-sign-up-color);
+    color: white!important;
     border-radius: 55rem;
+    transition: background-color var(--navbar-animation-duration);
+}
+
+#navbar #nav-menu .nav-list-i:last-child .nav-list-link{
     padding: .5rem 1rem;
 }

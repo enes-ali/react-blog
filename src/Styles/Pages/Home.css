@@ -1,3 +1,7 @@
+#home-wrapper{
+    padding-top: var(--navbar-height);
+}
+
 #banner{
     position: relative;
     background-color: var(--color-yellow); 

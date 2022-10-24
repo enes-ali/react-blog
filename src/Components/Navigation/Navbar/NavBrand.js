@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
-
-function NavBrand(props){
+export default function NavBrand(props){
 
     return(
         <div id="nav-brand">
@@ -9,5 +8,3 @@ function NavBrand(props){
         </div>
     );
 }
-
-export default NavBrand;
