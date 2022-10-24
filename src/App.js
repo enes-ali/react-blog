@@ -9,12 +9,35 @@ import "./App.css";
 
 export default function App(){
   const mq_small = window.matchMedia("(max-width: 512px)");
-  
   const [is_mobile, setIsMobile] = useState(mq_small.matches);
 
   useEffect(() => {
-    mq_small.addEventListener("change", () => { setIsMobile(mq_small.matches) });
-  });
+    const handleMqSmallChange = () => { setIsMobile(mq_small.matches) };
+    mq_small.addEventListener("change", handleMqSmallChange);
+
+    return () => { mq_small.removeEventListener("change", handleMqSmallChange); }
+  }, []);
+
+  
+  useEffect(() => {
+    const root_element = document.querySelector(":root");
+    
+    const handleScrool = () => {
+      if(document.body.scrollTop > 350 || document.documentElement.scrollTop > 350 ){
+          root_element.style.setProperty("--navbar-color", "rgb(255, 255, 255)");
+          root_element.style.setProperty("--navbar-sign-up-color", "rgb(5, 136, 1)");
+      }else{
+          root_element.style.setProperty("--navbar-color", "var(--color-yellow)");
+          root_element.style.setProperty("--navbar-sign-up-color", "rgb(0, 0, 0)");
+      }
+    }
+
+    window.addEventListener("scroll", handleScrool);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrool);
+    }
+  }, []);
 
   return(
     <BrowserRouter>
@@ -25,6 +48,9 @@ export default function App(){
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
+
+      <div style={{"width": "100%", "height": "1000px"}}></div>
+
     </BrowserRouter>
   );
 }
