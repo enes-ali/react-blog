@@ -1,0 +1,110 @@
+.post-list-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-list-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
+}
+
+.p-list-itm{
+    display: grid;
+    color: var(--text-color-primary);
+    grid-template-columns: auto 1fr auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
+    column-gap: 1rem;
+    font-weight: 400;
+}
+
+.p-list-itm-number{
+    height: 1.5rem;/* to make it appear on the top of the item */
+    display: flex; 
+    align-items: center;
+    font-weight: 600;
+    font-size: 2rem;
+    color: rgb(190, 190, 190);
+    margin: 0;
+    padding: 0;
+}
+
+.p-list-itm-writer{
+    display: flex;
+    align-items: center;
+    column-gap: .4rem;
+    font-size: .8rem;
+    margin-bottom: .3rem;
+}
+
+.p-list-itm-pp{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.p-list-itm-pp-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-list-itm-writer-links{
+    color: rgb(122, 122, 122);
+}
+
+.p-list-itm-writer-links a{
+    color: var(--text-color-primary);
+    text-decoration: none;
+}
+
+.p-list-itm-content{
+    margin-bottom: .3rem;
+}
+
+.p-list-itm-title{
+    margin: 0;
+}
+
+.p-list-itm-summary{
+    display: none;
+    font-size: 1rem;
+    max-height: 3rem;
+    color: rgb(68, 68, 68);
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+.p-list-itm-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Dosis', sans-serif;
+}
+
+.p-list-itm-date-time-wrapper{
+    font-size: 1rem;
+    color: rgb(68, 68, 68);
+    margin: 0;
+}
+
+.p-list-itm-tag{
+    color: rgb(121, 121, 121);
+    text-decoration: none;
+    border-radius: 50rem;
+    background-color: rgb(233, 233, 233);
+    padding: 2px 5px;
+    margin-left: 2px;
+    font-weight: 400;
+}
+
+.p-list-itm-bookmark{
+    width: 1rem;
+}
+
+.post-cover{
+    object-fit: cover;
+    width: 6rem;
+    height: 6rem;
+}
