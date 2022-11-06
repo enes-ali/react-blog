@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import MqMobileHook from "../../../Hooks/MqMobileHook.js";
 import NavDesktop from "./NavDesktop.js";
 import NavMobile from "./NavMobile.js";
 
@@ -6,15 +7,7 @@ import NavMobile from "./NavMobile.js";
 const mq_small = window.matchMedia("(max-width: 512px)");
 
 export default function Navbar(){
-    const [is_mobile, setIsMobile] = useState(mq_small.matches);
-  
-    useEffect(() => {
-      const handleMqSmallChange = () => { setIsMobile(mq_small.matches) };
-      mq_small.addEventListener("change", handleMqSmallChange);
-  
-      return () => { mq_small.removeEventListener("change", handleMqSmallChange); }
-    }, []);
-  
+    const is_mobile = MqMobileHook();
     
     useEffect(() => {
       const root_element = document.querySelector(":root");
