@@ -19,8 +19,6 @@ export default function App(){
         </Routes>
       </div>
 
-      <div style={{"width": "100%", "height": "1000px"}}></div>
-
     </BrowserRouter>
   );
 }

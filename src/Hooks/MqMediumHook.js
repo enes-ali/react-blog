@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 
-const mq_medium = window.matchMedia("(min-width: 70rem)");
+const mq_medium = window.matchMedia("(min-width: 920px)");
 
 export default function MqMediumHook(){
     const [is_medium, setIsMedium] = useState(mq_medium.matches);

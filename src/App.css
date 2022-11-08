@@ -4,12 +4,15 @@
     --color-red: rgb(221, 43, 30);
     --color-blue: rgb(38, 169, 230);
     --color-primary: white;
+    --color-faded-gray: rgb(190, 190, 190);
     --color-secondary: var(--color-blue);
     --text-color-primary: black;
     --text-color-secondary: white;
 
     /* Sizes */
     --content-max-width: 90rem;
+    --content-rl-padding: 2rem;
+    --content-rl-padding-s: 1.5rem;
 }
 
 body{

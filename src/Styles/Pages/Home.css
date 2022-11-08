@@ -12,7 +12,7 @@
 #banner-content{
     max-width: 90rem;
     margin: auto;
-    padding: 3rem 2rem;
+    padding: 3rem var(--content-rl-padding-s);
 }
 
 #banner-content h1, #banner-content p{
@@ -66,12 +66,12 @@
 
 /* Trending */
 #trending-wrapper{
-    border-bottom: solid 1px rgb(190, 190, 190);
+    border-bottom: solid 1px var(--color-faded-gray);
 }
 
 #trending{
     margin: auto;
-    padding: 1rem;
+    padding: 1rem var(--content-rl-padding-s);
 }
 
 #trending-header{
@@ -108,13 +108,50 @@
     font-size: clamp(.3rem, .3rem + 2vw, .9rem);
 }
 
+/* Main content (Post List) */
+
 #main-content-wrapper{
     max-width: var(--content-max-width);
     margin: auto;
 }
 
+/* Discover tags */
+#discover-tags{
+    border-bottom: solid 1px var(--color-faded-gray);
+    padding: 1rem var(--content-rl-padding-s);
+}
+
+#discover-tags h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(.6rem, .6rem + 1vw, 1.2rem);
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+#tag-container{
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: .5rem;
+}
+
+.tag{
+    text-decoration: none;
+    color: rgb(95, 95, 95);
+    border: solid 1px var(--color-faded-gray);
+    border-radius: 3px;
+    background-color: white;
+    font-size: clamp(.5rem, .5rem + 1vw, .8em);
+    padding: .5rem 1rem;
+    margin-right: .5rem;
+}
+
+/* Feed */
 #feed{
-    padding: 2rem 1.5rem;
+    padding: 2rem var(--content-rl-padding-s);
+}
+
+#feed .post-list-row{
+    align-items: stretch;
 }
 
 #feed .p-list-itm{
@@ -141,34 +178,22 @@
     display: none;
 }
 
-@media screen and (min-width: 520px){
-    #trending .p-list-itm-pp, #feed .p-list-itm-pp{
-        width: 25px;
-        height: 25px;
-    }
 
-    #trending .p-list-itm-writer, #feed .p-list-itm-writer{
-        font-size: .9rem;
-    }
-
-    #feed .post-cover{
-        width: 12rem;
-        height: 8rem;
-    }
-}
-
-@media screen and (min-width: 720px){
-    #trending{
-        width: fit-content;
-        padding: 2rem;
+@media screen and (min-width: 620px){
+    #banner-content{
+        padding: 5rem var(--content-rl-padding);
     }
 
     #trending .post-list-grid{
         grid-template-columns: repeat(2, minmax(20rem, 30rem));
     }
     
-    #feed{
-        padding: 2rem 3rem;
+    #trending .p-list-itm-pp, #feed .p-list-itm-pp{
+        width: 25px;
+        height: 25px;
+    }
+    #trending .p-list-itm-writer, #feed .p-list-itm-writer{
+        font-size: .9rem;
     }
 
     #feed .p-list-itm{
@@ -191,12 +216,22 @@
     #feed .p-list-itm-bookmark{
         width: 1.2rem;
     }
+
+    #feed .post-cover{
+        width: 12rem;
+        height: 8rem;
+    }
 }
 
 @media screen and (min-width: 920px){
+    #banner-content{
+        padding: 8.2rem var(--content-rl-padding);
+    }
+
     #trending{
         width: fit-content;
         max-width: var(--content-max-width);
+        padding: var(--content-rl-padding);
     }
 
     #trending .post-list-grid{
@@ -206,19 +241,33 @@
     #main-content-wrapper{
         display: grid;
         grid-template-columns: 6fr 4fr;
+        grid-template-areas: "feed aside";
+        column-gap: 2rem;
+        padding: var(--content-rl-padding);
     }
-    
 
-    
+    #main-content-wrapper aside{
+        grid-area: aside;
+        position: sticky;
+        top: calc(var(--navbar-height) + 10px);
+        max-width: 25rem;
+        place-self: start center;
+    }
+
+    #discover-tags{
+        height: fit-content;
+        border-bottom: solid 1px var(--color-faded-gray);
+        padding: 0 0 1rem 0;
+    }
+
+    #feed{
+        max-width: 45rem;
+        padding: 0;
+    }
+
     #feed .post-cover{
+        grid-area: feed;
         width: 12rem;
         height: 8rem;
-    } 
-}
-
-@media screen and (min-width: 92rem){
-    #feed{
-        padding: 2rem 0;
-        max-width: 45rem;
     }
 }
