@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Banner from '../Components/Banner';
 import DiscoverTags from '../Components/DiscoverTags';
 import Feed from '../Components/Feed';
+import NavList from '../Components/Lists/NavList';
 import Trending from '../Components/Trending';
 import "../Styles/Pages/Home.css";
 
@@ -30,6 +31,13 @@ export default function Home(props){
             <div id="main-content-wrapper">
                 <aside>
                     <DiscoverTags tags={ tags } />
+
+                    <footer id="desktop-footer">
+                        <NavList direction="row" 
+                            items={ {Help: "/help", Status: "/status", Writers: "/writers",
+                            Blog: "/blog", Careers: "/careers", Privacy: "privacy", Terms: "/terms",
+                            About: "About"} } />
+                    </footer>
                 </aside>
 
                 <main>

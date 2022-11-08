@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     max-width: var(--content-max-width);
-    padding: 0 2rem;
+    padding: 0 var(--content-rl-padding);
     margin: auto;
     height: 100%;
 }
@@ -46,7 +46,7 @@
     font-weight: 400;
 }
 
-.nav-list-i:last-child .nav-list-link{
+#nav-menu .nav-list-i:last-child .nav-list-link{
     background-color: var(--navbar-sign-up-color);
     color: white!important;
     border-radius: 55rem;

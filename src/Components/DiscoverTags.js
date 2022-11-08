@@ -7,7 +7,7 @@ export default function DiscoverTags(props){
             <h1>DISCOVER WHAT MATTERS TO YOU</h1>
             <div id="tag-container">
                 {props.tags.map((tag, index) => {
-                    return <Link className="tag" to={tag.link}>{tag.text}</Link>;
+                    return <Link className="tag" to={tag.link} key={index}>{tag.text}</Link>;
                 })}
             </div>
         </div>
