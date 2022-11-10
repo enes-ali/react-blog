@@ -4,6 +4,7 @@ import Banner from '../Components/Banner';
 import DiscoverTags from '../Components/DiscoverTags';
 import Feed from '../Components/Feed';
 import NavList from '../Components/Lists/NavList';
+import MobileFooter from '../Components/MobileFooter';
 import Trending from '../Components/Trending';
 import "../Styles/Pages/Home.css";
 
@@ -43,6 +44,8 @@ export default function Home(props){
                 <main>
                     <Feed />
                 </main>
+
+                <MobileFooter />
             </div>
         </div>
     );

@@ -178,6 +178,48 @@
     display: none;
 }
 
+#mobile-footer{
+    background-color: black;
+    padding: var(--content-rl-padding-s);
+    font-family: 'Dosis', sans-serif;
+    font-size: .9rem;
+}
+
+#footer-nav-wrapper{
+    border-bottom: solid 1px var(--color-faded-gray);
+    padding-bottom: 1.5rem;
+}
+
+#mobile-footer #brand-logo{
+    max-width: 9rem;
+}
+
+#mobile-footer .nav-list{
+    margin: 1rem 0 0 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#get-the-app{
+    color: white;
+    padding-top: 1.5rem;
+}
+
+#get-the-app h1{
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+#app-badge-wrapper{
+    display: flex;
+    column-gap: 1rem;
+}
+
+.app-badge{
+    flex-shrink: 1;
+    flex-basis: 10rem;
+}
+
 #desktop-footer{
     display: none;
 }
@@ -290,5 +332,9 @@
         grid-area: feed;
         width: 12rem;
         height: 8rem;
+    }
+
+    #mobile-footer{
+        display: none;
     }
 }

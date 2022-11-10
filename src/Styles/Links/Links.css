@@ -1,0 +1,11 @@
+.img-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color-primary);
+    overflow: hidden;
+}
+
+.img-link > img {
+    max-width: 100%;
+}
