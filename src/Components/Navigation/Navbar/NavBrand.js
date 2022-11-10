@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import ImageLinkIn from "../../Links/ImageLinkIn";
+import BrandLogo from "../../../Assets/icons/brand_black.png";
 
 export default function NavBrand(props){
 
     return(
         <div id="nav-brand">
-            <Link to="/"><h1>Branded</h1></Link>
+            <ImageLinkIn href="/" src={BrandLogo} />
         </div>
     );
 }

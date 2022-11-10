@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import BrandLogo from "../Assets/icons/brand_logo.png";
+import BrandLogo from "../Assets/icons/brand_white.png";
 import NavList from '../Components/Lists/NavList';
 import ImageLinkEx from "./Links/ImageLinkEx";
 import PlayStoreBadge from "../Assets/icons/google-play-badge.png";
@@ -28,8 +28,3 @@ export default function MobileFooter(){
         </footer>
     );
 }
-
-/*
-                <Link to="/" id="brand-link">
-                    <img src={BrandLogo} id="brand-logo"/>
-                </Link>*/

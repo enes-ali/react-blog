@@ -15,9 +15,8 @@
 }
 
 
-#mobile-navbar #nav-brand h1{
-    margin: 0;
-    font-size: 2rem;
+#mobile-navbar #nav-brand .img-link{
+    max-width: 10rem;
 }
 
 #mobile-navbar #nav-menu .nav-list-link{
